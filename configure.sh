@@ -26,7 +26,7 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
 
 #install ngrok
-brew install caskroom/cask/brew-cask
+brew install homebrew/cask
 brew cask install ngrok
 
 #configure ngrok and start it
