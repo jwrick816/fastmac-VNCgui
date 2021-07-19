@@ -27,7 +27,7 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 
 #install ngrok
 brew install cask
-brew cask install ngrok
+brew install --cask ngrok
 
 #configure ngrok and start it
 ngrok authtoken $3
