@@ -40,9 +40,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
-
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build2:
     needs:
           - build1
@@ -57,8 +61,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build3:
   
     needs:
@@ -74,8 +83,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build4:
   
     needs:
@@ -91,8 +105,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build5:
   
     needs:
@@ -108,8 +127,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build6:
   
     needs:
@@ -125,8 +149,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build7:
   
     needs:
@@ -142,8 +171,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build8:
   
     needs:
@@ -159,8 +193,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build9:
   
     needs:
@@ -176,8 +215,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build10:
   
     needs:
@@ -193,8 +237,13 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
   build11:
   
     needs:
@@ -210,5 +259,10 @@ jobs:
       run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+    - name: Notifying U
+      run: |
+        pip install requests
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
+      
