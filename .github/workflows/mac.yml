@@ -20,3 +20,191 @@ jobs:
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v2
+      
+  build1:
+    needs:
+          - build
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+
+  build2:
+    needs:
+          - build1
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build3:
+  
+    needs:
+          - build2
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build4:
+  
+    needs:
+          - build3
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build5:
+  
+    needs:
+          - build4
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build6:
+  
+    needs:
+          - build5
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build7:
+  
+    needs:
+          - build6
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build8:
+  
+    needs:
+          - build7
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build9:
+  
+    needs:
+          - build8
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build10:
+  
+    needs:
+          - build9
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
+  build11:
+  
+    needs:
+          - build10
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setting the environment up.
+      env:
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        VNC_USER_PASSWORD: ${{ secrets.VNC_USER_PASSWORD }}
+        VNC_PASSWORD: ${{ secrets.VNC_PASSWORD }}
+      run: source configure.sh "$VNC_USER_PASSWORD" "$VNC_PASSWORD" "$NGROK_AUTH_TOKEN"
+    - name: ngrok is now listening to VNC connections on...
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
