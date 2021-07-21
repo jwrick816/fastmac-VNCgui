@@ -6,7 +6,7 @@ output = stream.read()
 
 import string
 sample_str = "{}".format(output)
-last_chars = sample_str[1:]
+last_chars = sample_str[7:]
 
 p = last_chars[:26]
 
