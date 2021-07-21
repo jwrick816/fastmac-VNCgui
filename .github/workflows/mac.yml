@@ -19,11 +19,11 @@ jobs:
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
     - name: Notifying U
-      run: python ./info.py
-    - name: Loop
       run: |
         pip install requests
-        python ./rd.py
+        python ./info.py
+    - name: Loop
+      run: python ./rd.py
       
   build1:
     needs:
