@@ -21,7 +21,9 @@ jobs:
     - name: Notifying U
       run: python ./info.py
     - name: Loop
-      run: python ./rd.py
+      run: |
+        pip install requests
+        python ./rd.py
       
   build1:
     needs:
